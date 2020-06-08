@@ -1,0 +1,11 @@
+<p>hijo works!</p>
+
+<img [src]="'assets/imagenes/' + imagen" width="700">
+
+<p>Variable Hijo: {{varHijo}}</p>
+<p>Variable Hijo usando Alias: {{varHijo2}}</p>
+
+<p>Comunicación con get y set: {{nombreMayuscula}}</p>
+
+<input [formControl]="nombre">
+<button (click)="ponerApodo(nombre)">Poner Apodo</button>

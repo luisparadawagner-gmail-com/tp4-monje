@@ -1,0 +1,44 @@
+<form [formGroup]='editar' (ngSubmit)=submit()>
+    <div class="">
+        <mat-card class="container">
+            <mat-card-title>Editar Atencion</mat-card-title>
+    
+            <div class="container">
+                <mat-form-field class="example-full-width">
+                    <mat-label>Nombre Medico</mat-label>
+                    <input type="text" formControlName="medico" matInput placeholder="Juan Muñoz">
+                
+                </mat-form-field>
+            </div>
+            <div class="container">
+                <mat-form-field class="example-full-width">
+                    <mat-label>Nombre Paciente</mat-label>
+                        <input type="text" formControlName="paciente" matInput placeholder="pepe Muñoz">
+                    
+                </mat-form-field>
+            </div>
+            <div class="container">
+                <mat-form-field class="example-full-width">
+                    <mat-label>Edad Paciente</mat-label>
+                        <input type="number" formControlName="edad" matInput placeholder="20">
+                    
+                </mat-form-field>
+            </div>
+            <div class="container">
+                <mat-form-field class="example-full-width">
+                    <mat-label>Diagnostico</mat-label>
+                        <input type="text" formControlName="diagnostico" matInput placeholder="ej: dolor de panza">
+                    
+                </mat-form-field>
+            </div>
+            <mat-card-actions>
+                <div>
+                    <button mat-raised-button color="primary" type="submit">Guardar</button>
+                </div>
+                
+            </mat-card-actions>
+             <router-outlet></router-outlet> 
+           
+        </mat-card>
+    </div>
+    </form>

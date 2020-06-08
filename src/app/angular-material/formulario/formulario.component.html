@@ -1,0 +1,51 @@
+<div class="">
+    <mat-card class="container">
+        <mat-card-header>
+            <div mat-card-avatar class="example-header-image"></div>
+
+             Aplicamos la dirtectiva appColor a este elemento 
+             <mat-card-title>Título</mat-card-title>
+            <mat-card-subtitle>Angular</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content class="content" [ngStyle]="{'background': color ? 'red' : 'transparent'}">
+       
+         <p [appColor]="colorTexto" defaultColor="red">clickear</p>
+
+        <mat-grid-list cols="3" rowHeight="100px">
+            <mat-form-field>
+                <mat-label>Cerveza preferida</mat-label>
+                <mat-select (selectionChange)="selectBebida($event)">
+                    <mat-option *ngFor="let bebida of bebidas" [value]="bebida.value">
+                        {{bebida.viewValue}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+            <mat-form-field class="example-full-width">
+                <mat-label>Ingrese Un Número</mat-label>
+                <input [(ngModel)]="numero" matInput placeholder="33">
+            </mat-form-field>
+            <mat-slide-toggle (change)="cambiarColor($event)">Elegir color</mat-slide-toggle>
+            <h1 *appNumero="numero">Numero: {{numero}}</h1>
+
+            <h1>Fecha sin Pipe: {{fecha}}</h1>
+            <h1>Fecha con Pipe: {{fecha | date}}</h1>
+            <h1>hora con Pipe: {{ fecha | date:'shortTime' }} </h1>
+            <h1>Fecha con Pipe y parámetro: {{fecha | date: 'dd/MM/yyyy'}}</h1>
+            <h1>Fecha con Pipe encadenados: {{fecha | date: 'fullDate':'es-ES' | lowercase}}</h1>
+            <h1>Pipe Personal: {{palabraFea | caracteresRaros:'minus'}}</h1> 
+        </mat-grid-list>
+
+        </mat-card-content>
+        <mat-card-actions>
+            <div>
+                <button [ngStyle]="{'color': 'white','background-color': 'blue', margin: '5px', padding: '5px'}"
+                    mat-flat-button>Guardar</button>
+                <button class="botones" mat-flat-button color="warn">Cancelar</button>
+            </div>
+        </mat-card-actions>
+
+    </mat-card>
+
+
+
+</div> 
