@@ -13,41 +13,37 @@ export class BComponent implements OnInit {
 
   constructor(private fb: FormBuilder) { }
 
-  medico: string;
-  paciente: string;
-  edad: number;
-  diagnostico: string;
-
-
-  editar = this.fb.group({
-    medico: [''],
-    paciente: [''],
-    edad: [''],
-    diagnostico: ['']
-    
-  })
-
-
-
-
-  // vieneDelPadre(medico){
-  //   alert('vengo del padre' + medico);
-  // }
-
-
-  // private _medico = '';
-  // @Input()
-	// set medico(medico: string) {
-	// 	debugger;
-	// 	this._medico = medico && medico.toUpperCase();
-	// }
-	// get medico(): string {
-	// 	return this._medico;
-	// }
+  @Input() medicoPadre: string;
+  @Input() pacientePadre: string;
+  @Input() edadPadre: number;
+  @Input() diagnosticoPadre: string;
+  @Input() editar: FormGroup;
 
   ngOnInit() {
+
+    this.editar = this.fb.group({
+      medico: [this.medicoPadre],
+      paciente: [this.pacientePadre],
+      edad: [this.edadPadre],
+      diagnostico: [this.diagnosticoPadre]
+      
+    })
+
+
   }
 
 
+
+  // medico: string;
+  // paciente: string;
+  // edad: number;
+  // diagnostico: string;
+
+  // editarValores(medico: string, paciente: string, edad: number, diagnostico: string){
+  //   this.medico = medico;
+  //   this.paciente = paciente;
+  //   this.edad = edad;
+  //   this.diagnostico = diagnostico;
+  // }
 
 }

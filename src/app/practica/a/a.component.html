@@ -33,7 +33,7 @@
             </div>
             <mat-card-actions>
                 <div>
-                    <button routerLink="b-component" mat-raised-button color="primary" type="submit">Guardar</button>
+                    <button routerLink="b-component" mat-raised-button color="primary" type="submit()">Guardar</button>
                 </div>
                 
             </mat-card-actions>
@@ -46,5 +46,19 @@
 
 
 
+<!-- <mat-label>Nombre Medico
+    <input type="text" [(ngModel)]="medico" matInput placeholder="Juan Muñoz">
+</mat-label>
+<br>  
 
 
+ <button (click)="submit()">enviar</button> 
+
+  <nav>
+    <ul>
+      <li><a routerLink="b">b-component</a></li>
+    </ul>
+  </nav> 
+  <router-outlet></router-outlet>
+
+<app-b></app-b>  -->

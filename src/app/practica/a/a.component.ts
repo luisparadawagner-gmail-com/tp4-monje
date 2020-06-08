@@ -25,6 +25,12 @@ export class AComponent implements OnInit {
   edad: number;
   diagnostico: string;
 
+  ngOnInit() {
+
+    this.medico = this.atencion.get('medico').value;
+
+  }
+
   atencion = this.fb.group({
     medico: [''],
     paciente: [''],
@@ -33,12 +39,15 @@ export class AComponent implements OnInit {
   })
 
 
+
   submit(){
 
+    // this.viewChildHijo.editarValores(this.medico, this.paciente, this.edad, this.diagnostico);
+    
     debugger;
     this.atencion.value;
 
-    
+   
 		// this.atencion.setValue({
     //   medico: 'nico',
     //   paciente: 'alexis',
@@ -48,11 +57,7 @@ export class AComponent implements OnInit {
     
   }
 
-  ngOnInit() {
-  }
 
-
-  
 
 
 }
