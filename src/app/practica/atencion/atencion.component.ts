@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewChild, ViewChildren, Output,NgModule } from '@angular/core';
 import  {  FormControl,  FormGroup, FormBuilder,Validators, FormArray  } from '@angular/forms';
-import { BComponent } from './../b/b.component';
+import { BComponent } from '../editar/editar.component';
 
 // export interface atencion{
 //   medico: string,
@@ -10,9 +10,9 @@ import { BComponent } from './../b/b.component';
 // }
 
 @Component({
-  selector: 'app-a',
-  templateUrl: './a.component.html',
-  styleUrls: ['./a.component.css']
+  selector: 'app-atencion',
+  templateUrl: './atencion.component.html',
+  styleUrls: ['./atencion.component.css']
 })
 export class AComponent implements OnInit {
 

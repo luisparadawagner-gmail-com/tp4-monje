@@ -1,7 +1,7 @@
 
 import { Component, OnInit, Input } from '@angular/core';
 import  {  FormControl,  FormGroup, FormBuilder,Validators, FormArray  } from '@angular/forms';
-import { AComponent } from '../a/a.component';
+import { AComponent } from '../atencion/atencion.component';
 
 
 @Component({

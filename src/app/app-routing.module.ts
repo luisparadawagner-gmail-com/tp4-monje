@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { AComponent } from './practica/a/a.component';
-import { BComponent } from './practica/b/b.component';
-import { CComponent } from './practica/c/c.component';
+import { AComponent } from './practica/atencion/atencion.component';
+import { BComponent } from './practica/editar/editar.component';
+import { CComponent } from './practica/regsitros/registros.component';
 
 const routes: Routes = [
     { 

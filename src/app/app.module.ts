@@ -26,9 +26,9 @@ import { AppColorDirective } from './angular-material/directivas/color.directive
 import { AppNumeroDirective } from './angular-material/directivas/numero.directive';
 //pipe
 import { CaracteresRarosPipe } from './angular-material/pipes/caracteres-raros.pipe';
-import { AComponent } from './practica/a/a.component';
-import { BComponent } from './practica/b/b.component';
-import { CComponent } from './practica/c/c.component';
+import { AComponent } from './practica/atencion/atencion.component';
+import { BComponent } from './practica/editar/editar.component';
+import { CComponent } from './practica/regsitros/registros.component';
 
 
 
