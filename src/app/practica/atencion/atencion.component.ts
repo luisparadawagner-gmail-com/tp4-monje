@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewChild, ViewChildren, Output,NgModule } from '@angular/core';
 import  {  FormControl,  FormGroup, FormBuilder,Validators, FormArray  } from '@angular/forms';
-import { BComponent } from '../editar/editar.component';
+import { Atencion } from 'src/app/clases/Atencion';
 
 // export interface atencion{
 //   medico: string,
@@ -14,24 +14,18 @@ import { BComponent } from '../editar/editar.component';
   templateUrl: './atencion.component.html',
   styleUrls: ['./atencion.component.css']
 })
-export class AComponent implements OnInit {
+export class AtencionComponent implements OnInit {
 
-  @ViewChild(BComponent, {static: false}) private viewChildHijo: BComponent;
 
   constructor(private fb: FormBuilder) { }
 
-  medico: string; 
-  paciente: string;
-  edad: number;
-  diagnostico: string;
 
-  ngOnInit() {
+  atencion: Atencion;
+  showEditar: boolean = false;
+  showAtencion: boolean = true;
 
-    this.medico = this.atencion.get('medico').value;
 
-  }
-
-  atencion = this.fb.group({
+  atencionForm = this.fb.group({
     medico: [''],
     paciente: [''],
     edad: [''],
@@ -41,22 +35,22 @@ export class AComponent implements OnInit {
 
 
   submit(){
-
-    // this.viewChildHijo.editarValores(this.medico, this.paciente, this.edad, this.diagnostico);
-    
-    debugger;
-    this.atencion.value;
-
    
-		// this.atencion.setValue({
-    //   medico: 'nico',
-    //   paciente: 'alexis',
-    //   edad: 19,
-    //   diagnostico: 'dolor de panza'
-    // });
+    debugger;
+    this.atencionForm.value;
+
+    this.atencion = this.atencionForm.value;
+    this.showEditar=true;
+    this.showAtencion=false;
+
     
   }
 
+  
+  ngOnInit() {
+
+ 
+  }
 
 
 

@@ -1,23 +1,23 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { AComponent } from './practica/atencion/atencion.component';
-import { BComponent } from './practica/editar/editar.component';
-import { CComponent } from './practica/regsitros/registros.component';
+import { AtencionComponent } from './practica/atencion/atencion.component';
+import { EditarComponent } from './practica/editar/editar.component';
+import { RegistrosComponent } from './practica/regsitros/registros.component';
 
 const routes: Routes = [
     { 
-      path: 'a-component', 
-      component: AComponent,
+      path: 'atencion-component', 
+      component: AtencionComponent,
       children: [
         {
-          path:'b-component',
-          component: BComponent,
+          path:'editar-component',
+          component: EditarComponent,
           
         }
       ]
     },
-    {path: 'c-component', component: CComponent}
+    {path: 'registros-component', component: RegistrosComponent}
 
   //{ path: '', redirectTo: 'a-component', pathMatch: 'full' },
 

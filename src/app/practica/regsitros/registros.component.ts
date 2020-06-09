@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-c',
-  templateUrl: './c.component.html',
-  styleUrls: ['./c.component.css']
+  selector: 'app-registros',
+  templateUrl: './registros.component.html',
+  styleUrls: ['./registros.component.css']
 })
-export class CComponent implements OnInit {
+export class RegistrosComponent implements OnInit {
 
   displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
   // dataSource = ELEMENT_DATA;
