@@ -14,7 +14,7 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatTableModule} from '@angular/material/table';
-
+import {MatIconModule} from '@angular/material/icon';
 
 import { FormularioComponent } from './angular-material/formulario/formulario.component';
 import { PadreComponent } from './comunicacion/padre-hijo/padre/padre.component';
@@ -61,7 +61,8 @@ import { RegistrosComponent } from './practica/regsitros/registros.component';
     MatSelectModule,
     MatSlideToggleModule,
     MatMenuModule,
-    MatTableModule
+    MatTableModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]

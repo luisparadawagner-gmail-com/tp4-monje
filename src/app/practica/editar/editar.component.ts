@@ -1,7 +1,8 @@
 
 import { Component, OnInit, Input } from '@angular/core';
-import  {  FormControl,  FormGroup, FormBuilder,Validators, FormArray  } from '@angular/forms';
+import {  FormGroup, FormBuilder } from '@angular/forms';
 import { Atencion } from 'src/app/clases/Atencion';
+import { ActivatedRoute } from '@angular/router';
 
 
 
@@ -12,14 +13,25 @@ import { Atencion } from 'src/app/clases/Atencion';
 })
 export class EditarComponent implements OnInit {
 
-  constructor(private fb: FormBuilder) { }
+  constructor(private fb: FormBuilder, private rutaActiva: ActivatedRoute) { }
 
   @Input() editarAtencion: Atencion
   editarForm: FormGroup;
 
+  registro: any;
+  // atencion: Atencion;
+
+
   ngOnInit() {
     debugger;
-    let atencionPruba = this.editarAtencion;
+
+    this.registro = this.rutaActiva.snapshot.params;
+
+    if(Object.keys(this.registro).length){
+      this.editarAtencion = this.registro;
+		} 
+
+
     this.initForm(this.editarAtencion);
   }
 
