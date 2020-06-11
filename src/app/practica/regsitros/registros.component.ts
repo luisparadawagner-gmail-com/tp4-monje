@@ -28,7 +28,7 @@ export class RegistrosComponent implements OnInit {
   editarRegistro(element){
     debugger
 
-    this.router.navigate(['/editar-component', element])
+    this.router.navigate(['/atencion-component', element])
 
     // this.atencion.forEach()
 
